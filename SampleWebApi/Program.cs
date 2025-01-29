@@ -10,14 +10,7 @@ WebApplication app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     _ = app.MapOpenApi();
-
-    _ = app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/openapi/v1.json", "v1");
-    });
 }
-
-app.UseHttpsRedirection();
 
 string[] summaries =
 [
